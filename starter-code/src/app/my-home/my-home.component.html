@@ -1,3 +1,18 @@
-<p>
-  my-home works!
-</p>
+<div class="container">
+  <hr>
+  <div class="card-deck">    
+    <div class="row">
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" *ngFor="let movie of movies">
+          <p class="card-text">ROOM: {{ movie.room }}</p>
+          <div class="card">
+            <img class="card-img-top" src="{{ movie.poster }}" alt="Card image cap" height="180px">
+            <div class="card-block">
+              <h5 class="card-title">{{ movie.title }}</h5>
+              <p class="card-text"></p>
+              <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+            <a [routerLink]="['/movie', movie.id]"> details </a>
+          </div>
+        </div>
+    </div>
+  </div>
