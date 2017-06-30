@@ -1,3 +1,52 @@
-<p>
-  my-movie works!
-</p>
+<main class="container">
+<section class="filmes" id="filmes">
+    <h2>Featured Movies</h2>
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12">
+			<article class="card">
+				<header class="title-header">
+					<h3>{{ movie.title }}</h3>
+				</header>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <div class="card-block">
+            <div class="img-card">
+              <img [src]="movie.poster" alt="Movie" class="w-100"  width="200"  height="250px"/>
+            </div>            
+          </div>
+        </div>        
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+          <table style="width:100%">
+            <tr>
+              <th>Genres:</th>
+              <td>{{ movie.genres }}</td>
+            </tr>
+            <br>
+            <tr>
+              <th>Year:</th>
+              <td>{{ movie.year }}</td>
+            </tr>
+            <br>
+            <tr>
+              <th>Director:</th>
+              <td>{{ movie.director }}</td>
+            </tr>
+            <br>
+            <tr>
+              <th>Actors:</th>
+              <td>{{ movie.actors }}</td>
+            </tr>
+            <br>
+            <tr>
+              <th>Synopsis:</th>
+              <td>{{ movie.synopsis }}</td>
+            </tr>
+            <br>
+          </table>
+          
+          <a [routerLink]="['/home']" class="btn btn-info" role="button">Back to List</a>
+        </div>
+			</article>
+		</div>
+	</div>
+</section>
+</main>

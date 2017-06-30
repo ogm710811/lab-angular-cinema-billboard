@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { MyHomeComponent } from './my-home/my-home.component';
 import { MyMovieComponent } from './my-movie/my-movie.component';
+import { CinemaService } from './services/cinema.service';
 
 // Routing Table:
 const routes : Routes = [
@@ -27,7 +28,7 @@ const routes : Routes = [
     HttpModule,
     RouterModule.forRoot(routes)  //  <!-- "routes" is the array defined above
   ],
-  providers: [],
+  providers: [CinemaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
